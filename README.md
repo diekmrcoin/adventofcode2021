@@ -1,6 +1,7 @@
 # Advent of Code 2021
 
 ***
+[Advent of Code website](https://adventofcode.com/2021)
 
 You can see the code of every day and the variations between part 1 and part 2.
 
@@ -50,8 +51,9 @@ You can execute all the days with the following commands:
 
 ***
 
-#### Hardware
+#### Hardware & software
 
 Ubuntu 20  
+MSI Prestige  
 i7-8550U 1.80GHz x8   
 16GB RAM

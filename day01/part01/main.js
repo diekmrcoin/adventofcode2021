@@ -6,13 +6,7 @@ function main() {
   let lastMeasure;
   let increase = 0;
   for (const num of nums) {
-    if (lastMeasure === undefined) {
-      lastMeasure = num;
-      continue;
-    }
-    if (num > lastMeasure) {
-      increase++;
-    }
+    if (num > lastMeasure) increase++;
     lastMeasure = num;
   }
   return increase;

@@ -51,9 +51,7 @@ You can execute all the days with the following commands:
 
 ***
 
-#### Hardware & software
+#### Hardware
 
-Ubuntu 20  
-MSI Prestige  
 i7-8550U 1.80GHz x8   
 16GB RAM

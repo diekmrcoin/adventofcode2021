@@ -16,41 +16,36 @@ You can execute all the days with the following commands:
 <details>
 <summary>Benchmark results, spoilers warning</summary>
 
-Day 01, Part 01: 1616  
----- 0.06s
+**Day 1:**
 
-Day 01, Part 02: 1645  
----- 0.05s
+- Part 1: 1616 (0.06s)
+- Part 2: 1645 (0.05s)
 
-Day 02, part 01: 1580000  
----- 0.05s
+**Day 2:**
 
-Day 02, part 02: 1251263225  
----- 0.04s
+- Part 1: 1580000 (0.05s)
+- Part 2: 1251263225 (0.04s)
 
-Day 03, Part 01: 2743844  
----- 0.05s
+**Day 3:**
 
-Day 03, part 02: 6677951  
----- 0.05s
+- Part 1: 2743844 (0.05s)
+- Part 2: 6677951 (0.05s)
 
-Day 04, Part 01: 55770  
----- 0.07s
+**Day 4:**
 
-Day 04, Part 02: 2980  
----- 0.07s
+- Part 1: 55770 (0.07s)
+- Part 2: 2980 (0.07s)
 
-Day 05, Part 01: 6267  
----- 0.13s
+**Day 5:**
 
-Day 05, Part 01: 20196  
----- 0.22s
+- Part 1: 6267 (0.13s)
+- Part 2: 20196 (0.22s)
 
-Day 06, Part 01: 372984  
----- 0.14s
+**Day 6:**
 
-Day 06, part 02: 1681503251694  
----- 0.04s
+- Part 1: 372984 (0.14s)
+- Part 2: 1681503251694 (0.04s)
+
 </details>
 
 ***

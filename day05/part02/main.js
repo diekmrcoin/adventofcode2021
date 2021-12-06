@@ -4,7 +4,7 @@ const { expect } = require('chai');
 const result = main();
 const expected = 20196;
 expect(result).to.be.eq(expected);
-console.log("Day 05, Part 01:", result);
+console.log("Day 05, Part 02:", result);
 
 function main() {
   const overlapLimit = 2;

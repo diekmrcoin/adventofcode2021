@@ -1,7 +1,7 @@
 # Advent of Code 2021
 
 ***
-[Advent of Code website](https://adventofcode.com/2021)
+[Advent of Code 2021 website](https://adventofcode.com/2021)
 
 You can see the code of every day and the variations between part 1 and part 2.
 

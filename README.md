@@ -3,7 +3,7 @@
 ***
 [Advent of Code 2021 website](https://adventofcode.com/2021)
 
-You can see the code of every day and the variations between part 1 and part 2.
+You can see the code of every day and the variations in code between part 1 and part 2.
 
 You can execute all the days with the following commands:
 
@@ -14,6 +14,7 @@ You can execute all the days with the following commands:
 
 ### Advent of Code 2021 benchmark
 
+The benchmark is for curiosity (due to day 6 part 2), my goal here is not the optimized code.
 <details>
 <summary>SPOILER ALERT, the results are inside</summary>
 

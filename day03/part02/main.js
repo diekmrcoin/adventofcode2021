@@ -1,22 +1,17 @@
 const path = require('path');
 const { Column } = require('./column');
-main();
+const { expect } = require('chai');
+const result = main();
+const expected = 6677951;
+expect(result).to.be.eq(expected);
+console.log('Day 03, part 02:', result);
 
 function main() {
   const bytesList = readInput();
   const bytes = fillBytes(bytesList);
-
-  const gamma = parseInt(bytes.map(column => column.moreCommon()).join(''), 2);
-  const epsilon = parseInt(bytes.map(column => column.lessCommon()).join(''), 2);
-  console.log('Gamma:', gamma);
-  console.log('Epsilon:', epsilon);
-  console.log('Power consumption:', gamma * epsilon);
-
   const ogr = oxygenGeneratorRating(bytesList, bytes);
   const co2 = co2ScrubberRating(bytesList, bytes);
-  console.log('Oxygen generator rating:', ogr);
-  console.log('CO2 scrubber rating:', co2);
-  console.log('Life support rating', ogr * co2);
+  return ogr * co2;
 }
 
 /**

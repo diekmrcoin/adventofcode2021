@@ -1,6 +1,10 @@
 const path = require('path');
 const { Ocean } = require('./ocean');
-console.log('Part 2:', main());
+const { expect } = require('chai');
+const result = main();
+const expected = 1681503251694;
+expect(result).to.be.eq(expected);
+console.log("Day 06, part 02:", result);
 
 function main() {
   let daysToSimulate = 256;

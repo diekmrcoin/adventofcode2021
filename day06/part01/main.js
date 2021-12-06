@@ -1,5 +1,9 @@
 const path = require('path');
-console.log('Part 1:', main());
+const { expect } = require('chai');
+const result = main();
+const expected = 372984;
+expect(result).to.be.eq(expected);
+console.log("Day 06, Part 01:", result);
 
 function main() {
   let daysToSimulate = 80;

@@ -1,5 +1,7 @@
 const { Point } = require('./point');
 const path = require('path');
+const { expect } = require('chai');
+
 /**
  * @returns {string[]}
  */
@@ -17,4 +19,7 @@ function main() {
   return initialPoint.result();
 }
 
-console.log("Part 2:", main());
+const result = main();
+const expected = 1251263225;
+expect(result).to.be.eq(expected);
+console.log('Day 02, part 02:', result);

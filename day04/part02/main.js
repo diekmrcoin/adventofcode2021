@@ -1,6 +1,10 @@
 const path = require('path');
 const { BingoBoard } = require('./bingo-board');
-console.log('Score:', main());
+const { expect } = require('chai');
+const result = main();
+const expected = 2980;
+expect(result).to.be.eq(expected);
+console.log("Day 04, Part 02:", result);
 
 function main() {
   const input = readInput();

@@ -1,6 +1,10 @@
 const path = require('path');
 const { Column } = require('./column');
-console.log('Power consumption:', main());
+const { expect } = require('chai');
+const result = main();
+const expected = 2743844;
+expect(result).to.be.eq(expected);
+console.log('Day 03, Part 01:', result);
 
 function main() {
   const bitesList = readInput();
@@ -15,10 +19,8 @@ function main() {
       bytes[j][row.charAt(j)]++;
     }
   }
-  const gamma = parseInt(bytes.map(column => column.moreCommon()).join(""), 2);
-  const epsilon = parseInt(bytes.map(column => column.lessCommon()).join(""), 2);
-  console.log("Gamma:", gamma);
-  console.log("Epsilon:", epsilon);
+  const gamma = parseInt(bytes.map(column => column.moreCommon()).join(''), 2);
+  const epsilon = parseInt(bytes.map(column => column.lessCommon()).join(''), 2);
   return gamma * epsilon;
 }
 

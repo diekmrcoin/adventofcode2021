@@ -1,9 +1,0 @@
-{
-  "name": "day03",
-  "version": "1.0.0",
-  "main": "main.js",
-  "license": "MIT",
-  "scripts": {
-    "start": "node part02/main.js"
-  }
-}

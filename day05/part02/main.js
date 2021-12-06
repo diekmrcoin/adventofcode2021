@@ -1,6 +1,10 @@
 const path = require('path');
 const { Board } = require('./board');
-console.log('Amount of 2 lines overlap (2):', main());
+const { expect } = require('chai');
+const result = main();
+const expected = 20196;
+expect(result).to.be.eq(expected);
+console.log("Day 05, Part 01:", result);
 
 function main() {
   const overlapLimit = 2;

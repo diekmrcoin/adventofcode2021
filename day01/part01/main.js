@@ -1,5 +1,9 @@
 const path = require('path');
-console.log(main());
+const { expect } = require('chai');
+const result = main();
+const expected = 1616;
+expect(result).to.be.eq(expected);
+console.log("Day 01, Part 01:", result);
 
 function main() {
   const nums = readInput().map(Number);

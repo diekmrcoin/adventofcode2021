@@ -4,7 +4,7 @@
   "main": "main.js",
   "license": "MIT",
   "scripts": {
-    "start": "node part01/main.js",
+    "start": "node part01/main.js && node part02/main.js",
     "test": "jest"
   }
 }

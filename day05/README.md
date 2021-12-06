@@ -1,0 +1,2 @@
+- [Day 5 link](https://adventofcode.com/2021/day/5)
+- [Input link](https://adventofcode.com/2021/day/5/input)

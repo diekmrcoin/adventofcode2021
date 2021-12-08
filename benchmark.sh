@@ -19,6 +19,8 @@ echo ""
 \time -f "---- %Us\n" node day06/part02/main.js
 \time -f "---- %Us\n" node day07/part01/main.js
 \time -f "---- %Us\n" node day07/part02/main.js
+\time -f "---- %Us\n" node day08/part01/main.js
+\time -f "---- %Us\n" node day08/part02/main.js
 
 echo ""
 echo "*******"

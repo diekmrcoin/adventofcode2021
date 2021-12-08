@@ -52,7 +52,12 @@ The benchmark is for curiosity (due to day 6 part 2), my goal here is not the op
 
 - Part 1: 349769 *(0.08s)*
 - Part 2: 99540554 *(0.06s)*
-  - Time using recurrent like factorial *(1.44s)*
+    - Time using recurrent like factorial *(1.44s)*
+
+**Day 8:**
+
+- Part 1: 476 *(0.03s)*
+- Part 2: 1011823 *(0.08s)*
 
 </details>
 

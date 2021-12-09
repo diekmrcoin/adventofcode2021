@@ -1,6 +1,13 @@
 # Advent of Code 2021
 
+### Objective
+
+My personal objective doing this advent of code **is just to solve** every problem **in the same day** as it's released.
+
+#### Don't expect to find beautiful solutions, clean of optimized in any way.
+
 ***
+
 [Advent of Code 2021 website](https://adventofcode.com/2021)
 
 You can see the code of every day and the variations in code between part 1 and part 2.
@@ -58,6 +65,12 @@ The benchmark is for curiosity (due to day 6 part 2), my goal here is not the op
 
 - Part 1: 476 *(0.03s)*
 - Part 2: 1011823 *(0.08s)*
+
+**Day 9:**
+
+- Part 1: 478 *(0.04s)*
+- Part 2: 1327014 *(0.07s)*
+    - Solution with parallel basin processing almost not affect the execution time
 
 </details>
 

@@ -4,16 +4,16 @@ class ChunkLine {
    */
   constructor(chunk) {
     this.chunk = chunk;
+    this.opened = [];
   }
 
   validate() {
-    const opened = [];
     let score = 0;
     this.chunk.split('').some((char) => {
-      if (this.isOpeningChr(char)) opened.push(char);
+      if (this.isOpeningChr(char)) this.opened.push(char);
       else {
-        if (opened.pop() !== this.reverseChar(char)) {
-          return score += this.charScore(char);
+        if (this.opened.pop() !== this.reverseChar(char)) {
+          return score += this.badInputScore(char);
         }
       }
     });
@@ -47,7 +47,7 @@ class ChunkLine {
     }
   }
 
-  charScore(char) {
+  badInputScore(char) {
     switch (char) {
       case ')':
         return 3;
@@ -60,6 +60,15 @@ class ChunkLine {
       default:
         throw new Error(`Invalid score character: ${char}`);
     }
+  }
+
+  badOpeningScore(char) {
+    return {
+      '(': 1,
+      '[': 2,
+      '{': 3,
+      '<': 4,
+    }[char];
   }
 }
 

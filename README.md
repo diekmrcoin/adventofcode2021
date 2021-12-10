@@ -72,6 +72,11 @@ The benchmark is for curiosity (due to day 6 part 2), my goal here is not the op
 - Part 2: 1327014 *(0.07s)*
     - Solution with parallel basin processing almost not affect the execution time
 
+**Day 10:**
+
+- Part 1: 311949 *(0.06s)*
+- Part 2: 3042730309 *(0.07s)*
+
 </details>
 
 ***

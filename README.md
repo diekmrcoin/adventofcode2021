@@ -4,7 +4,7 @@
 
 My personal objective doing this advent of code **is just to solve** every problem **in the same day** as it's released.
 
-#### Don't expect to find beautiful solutions, clean of optimized in any way.
+#### Don't expect to find beautiful solutions, clean nor optimized in any way.
 
 ***
 

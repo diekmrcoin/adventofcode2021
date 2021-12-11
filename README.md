@@ -77,6 +77,11 @@ The benchmark is for curiosity (due to day 6 part 2), my goal here is not the op
 - Part 1: 311949 *(0.06s)*
 - Part 2: 3042730309 *(0.07s)*
 
+**Day 11:**
+
+- Part 1: 1702 *(0.08s)*
+- Part 2: 251 *(0.09s)*
+
 </details>
 
 ***

@@ -80,7 +80,7 @@ function printGrid(grid, foldAction, foldCoordinate) {
       data.push('-'.padEnd(maxX, '-'));
       continue;
     }
-    if (!grid[y]) data.push('.'.padEnd(maxX, '.'));
+    if (!grid[y]) data.push(' '.padEnd(maxX, ' '));
     else {
       const rowString = [];
       for (let x = 0; x < maxX; x++) {
@@ -88,7 +88,7 @@ function printGrid(grid, foldAction, foldCoordinate) {
           rowString.push('|'.red);
           continue;
         }
-        rowString.push(grid[y][x] ? '#' : '.');
+        rowString.push(grid[y][x] ? '#' : ' ');
       }
       data.push(rowString.join(''));
     }

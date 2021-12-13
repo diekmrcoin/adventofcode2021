@@ -1,10 +1,13 @@
 const colors = require('colors');
 const path = require('path');
 const { expect } = require('chai');
+const fs = require('fs');
+main();
 const result = main();
-const expected = 661;
+const expected = fs.readFileSync(path.resolve(__dirname, 'expected_result.txt'), 'utf8');
 expect(result).to.be.eq(expected);
-console.log('Day 13, Part 01:', result);
+console.log('Day 13, Part 02: PFKLKCFP');
+console.log(result.green);
 
 function main() {
   const input = readInput().filter(n => !!n);
@@ -21,16 +24,12 @@ function main() {
   }
 
   for (const fold of folds) {
-    // part 1 only one fold
-    // printGrid(grid, fold[0], fold[1]);
     if (fold[0] === 'x')
       foldGridToLeft(fold[1], grid);
     else
       foldGridUp(fold[1], grid);
-    break;
   }
-  // printGrid(grid);
-  return grid.reduce((sum, row) => sum + row.filter(n => n).length, 0);
+  return printGrid(grid);
 }
 
 /**
@@ -74,13 +73,14 @@ function foldGridUp(row, grid) {
 }
 
 function printGrid(grid, foldAction, foldCoordinate) {
+  const data = [];
   const maxX = grid.reduce((max, row) => Math.max(max, row.length), 0);
   for (let y = 0; y < grid.length; y++) {
     if (foldAction === 'y' && y === foldCoordinate) {
-      console.log('-'.padEnd(maxX, '-').red);
+      data.push('-'.padEnd(maxX, '-'));
       continue;
     }
-    if (!grid[y]) console.log('.'.padEnd(maxX, '.'));
+    if (!grid[y]) data.push('.'.padEnd(maxX, '.'));
     else {
       const rowString = [];
       for (let x = 0; x < maxX; x++) {
@@ -88,10 +88,12 @@ function printGrid(grid, foldAction, foldCoordinate) {
           rowString.push('|'.red);
           continue;
         }
-        rowString.push(grid[y][x] ? '#'.red : '.');
+        rowString.push(grid[y][x] ? '#' : '.');
       }
-      console.log(rowString.join(''));
+      data.push(rowString.join(''));
     }
   }
-  console.log('-----'.green);
+  const output = data.join('\n');
+  fs.writeFileSync(path.join(__dirname, 'output.txt'), output);
+  return output;
 }

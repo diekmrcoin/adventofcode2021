@@ -92,6 +92,15 @@ The benchmark is for curiosity (due to day 6 part 2), my goal here is not the op
 - Part 1: 661 *(0.09s)*
 - Part 2: PFKLKCFP *(0.1s)*
 
+**Day 14:**
+
+- Part 1: 2068 *(0.08s)*
+- Part 2: 2158894777814 *(0.09s)*
+    - Full polymer char's array calculation *(memory heap out)*
+    - Full polymer string calculation *(memory heap out)*
+    - Full polymer linked list calculation *(memory heap out)*
+    - Disaggregated pairs calculation **(Correct)**
+
 </details>
 
 ***

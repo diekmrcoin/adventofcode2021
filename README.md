@@ -102,8 +102,10 @@ The benchmark is for curiosity (due to day 6 part 2), my goal here is not the op
     - Disaggregated pairs calculation **(Correct)**
 
 **Day 15:**
+> Solved with A* -> [Wikipedia](https://en.wikipedia.org/wiki/A*_search_algorithm)
 
 - Part 1: 595 *(0.69s)*
+- Part 2: 2914 *(62.00s)*
 
 </details>
 

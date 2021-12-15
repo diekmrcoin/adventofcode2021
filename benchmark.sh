@@ -34,6 +34,7 @@ echo ""
 \time -f "---- %Us\n" node day14/part01/main.js
 \time -f "---- %Us\n" node day14/part02/main.js
 \time -f "---- %Us\n" node day15/part01/main.js
+\time -f "---- %Us\n" node day15/part02/main.js
 
 echo ""
 echo "*******"

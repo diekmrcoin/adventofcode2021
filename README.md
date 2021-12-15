@@ -101,6 +101,10 @@ The benchmark is for curiosity (due to day 6 part 2), my goal here is not the op
     - Full polymer linked list calculation *(memory heap out)*
     - Disaggregated pairs calculation **(Correct)**
 
+**Day 15:**
+
+- Part 1: 595 *(0.69s)*
+
 </details>
 
 ***

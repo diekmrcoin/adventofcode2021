@@ -30,7 +30,6 @@ function main() {
     input,
     heuristic,
   );
-  console.log(path);
   return path.reduce((acc, node) => acc + node.weight, input[0][0] * -1);
 }
 

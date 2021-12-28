@@ -7,6 +7,7 @@ class Node {
     this.x = x;
     this.y = y;
     this.weight = weight;
+    this.visited = false;
   }
 
   hash() {
@@ -37,9 +38,7 @@ function main() {
     start,
     goal,
     input,
-    heuristic,
   );
-  // printGrid(input, path);
   return path.reduce((acc, node) => acc + node.weight, input[0][0] * -1);
 }
 
@@ -55,32 +54,42 @@ function readInput() {
  * @param {Node} start
  * @param {Node} goal
  * @param {number[][]} grid
- * @param {function} heuristic
  * @returns {Node[]} path with min weight
  */
-function findPath(start, goal, grid, heuristic) {
+function findPath(start, goal, grid) {
   let openSet = [start];
+  let visitedSet = {};
   const cameFrom = {};
   const gScore = {};
   gScore[start.hash()] = start.weight;
   const fScore = {};
-  fScore[start.hash()] = heuristic(start, goal);
+  fScore[start.hash()] = heuristic(start, goal, grid);
   while (openSet.length) {
-    const current = openSet.shift();
+    const current = openSet.find(node => !node.visited);
+    current.visited = true;
+    delete visitedSet[current.hash()];
     if (current.hash() === goal.hash()) return reconstructPath(cameFrom, current);
     const neighbors = getNeighbors(current, grid);
     for (const neighbor of neighbors) {
       const gScoreNeighbor = gScore[current.hash()] + neighbor.weight;
-      const fScoreNeighbor = gScoreNeighbor + heuristic(neighbor, goal);
+      const fScoreNeighbor = gScoreNeighbor + heuristic(neighbor, goal, grid);
       if (!gScore[neighbor.hash()] || gScoreNeighbor < gScore[neighbor.hash()]) {
         cameFrom[neighbor.hash()] = current;
         gScore[neighbor.hash()] = gScoreNeighbor;
         fScore[neighbor.hash()] = fScoreNeighbor;
-        if (!openSet.find(n => n.hash() === neighbor.hash())) openSet.push(neighbor);
+        if (!visitedSet[neighbor.hash()]) {
+          openSet.push(neighbor);
+          visitedSet[neighbor.hash()] = true;
+        }
       }
     }
-    openSet = openSet.sort((a, b) => fScore[a.hash()] - fScore[b.hash()]);
+    // sort only every some new neighbors, to avoid O(n^2)
+    if (openSet.length % 100 === 0)
+      openSet = openSet
+        .filter(node => !node.visited)
+        .sort((a, b) => fScore[a.hash()] - fScore[b.hash()]);
   }
+  throw new Error('Path not found');
 }
 
 function reconstructPath(cameFrom, current) {
@@ -96,10 +105,11 @@ function reconstructPath(cameFrom, current) {
  * Euclidean distance
  * @param {Node} start
  * @param {Node} goal
+ * @param {number[][]} grid
  * @returns {number}
  */
-function heuristic(start, goal) {
-  return Math.abs(start.x - goal.x) + Math.abs(start.y - goal.y);
+function heuristic(start, goal, grid) {
+  return Math.abs(start.x - goal.x) + Math.abs(start.y - goal.y) + gridValue(start.y, start.x, grid);
 }
 
 /**
@@ -138,18 +148,4 @@ function gridValue(y, x, grid) {
   const xGrid = x % grid[0].length;
   const xDistance = Math.floor(x / grid[0].length);
   return ((grid[yGrid][xGrid] - 1 + yDistance + xDistance) % 9) + 1;
-}
-
-function printGrid(grid, path) {
-  for (let y = 0; y < grid.length * 5; y++) {
-    let row = '';
-    for (let x = 0; x < grid[0].length * 5; x++) {
-      const node = path.find(n => n.x === x && n.y === y);
-      if (node)
-        row += gridValue(y, x, grid).toString().green + ' ';
-      else
-        row += gridValue(y, x, grid) + ' ';
-    }
-    console.log(row);
-  }
 }

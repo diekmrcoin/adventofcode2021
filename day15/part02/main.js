@@ -84,7 +84,7 @@ function findPath(start, goal, grid) {
       }
     }
     // sort only every some new neighbors, to avoid O(n^2)
-    if (openSet.length % 100 === 0)
+    if (openSet.length % 300 === 0)
       openSet = openSet
         .filter(node => !node.visited)
         .sort((a, b) => fScore[a.hash()] - fScore[b.hash()]);

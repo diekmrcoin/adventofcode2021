@@ -107,7 +107,7 @@ The benchmark is for curiosity (due to day 6 part 2), my goal here is not the op
 - Part 1: 595 *(0.69s)*
 - Part 2: 2914
   - Sorting and shifting every new iteration to visit always the less weighted *(62.00s)*
-  - Some equilibrium between sorting and shifting the neighbors *(2.42s)*
+  - Some equilibrium between sorting and shifting the neighbors *(2.05s)*
 
 </details>
 
